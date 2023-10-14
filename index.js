@@ -16,7 +16,7 @@ const options = {
       version: "1.0.0",
     },
   },
-  apis: ["./routes/*.js"], // Sesuaikan dengan path ke rute Anda
+  apis: ["./routes/*.js"],
 };
 
 app.use("/", route);
