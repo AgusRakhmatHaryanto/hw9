@@ -6,7 +6,8 @@ const port = process.env.portenv;
 const morgan = require("morgan");
 const swaggerjsdocs = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
-const authRouter = require('./routes/authentication.route.js')
+const authRouter = require('./routes/authentication.route.js');
+
 
 
 const options = {
@@ -28,6 +29,7 @@ const options = {
 };
 
 const specs = swaggerjsdocs(options);
+
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 
 

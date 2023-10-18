@@ -43,7 +43,9 @@
 const express = require("express");
 const router = express.Router();
 const movies = require("../controllers/movie.controller");
+const authMiddleware = require('../middleware/authentification')
 
+router.use(authMiddleware);
 router.get("/movie", movies.getMovie);
 router.get("/movies", movies.getMovies);
 router.post("/movies", movies.addMovie);
